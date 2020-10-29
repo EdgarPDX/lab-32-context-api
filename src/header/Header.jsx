@@ -4,11 +4,10 @@ import { CharacterContext } from '../context/CharacterContext';
 
 const Header = () => {
   
-  const { bgColor, fnColor, handleDarkTheme } = useContext(CharacterContext);
+  const { handleDarkTheme } = useContext(CharacterContext);
   return (
     <>
       <button 
-        value={bgColor, fnColor} 
         onClick={handleDarkTheme}>
           Toggle Light/Dark
       </button>

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 export const CharacterContext = React.createContext();
 
+// eslint-disable-next-line react/prop-types
 export const CharacterProvider = ({ children }) => {
   const [bgColor, setBgColor] = useState('#ffffff');
   const [fnColor, setfnColor] = useState('#000000');
@@ -17,6 +18,8 @@ export const CharacterProvider = ({ children }) => {
     if(fnColor === '#ffffff')
       setfnColor('#000000');
   };
+
+  
   return (
     <CharacterContext.Provider value={{ bgColor, fnColor, handleDarkTheme }}>
       {children}
